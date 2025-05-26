@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stranger Things</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      background: url('https://tse4.mm.bing.net/th?id=OIP.Zb8eGRw3g042YPgJoxBobwHaEK&pid=Api&P=0&h=220') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(12px);
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    div {
+      background-color: rgba(34, 34, 34, 0.8);
+      border: 2px solid white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 40px auto;
+      width: 80%;
+      box-shadow: 0 0 10px white;
+    }
+
+    h1 {
+      color: red;
+    }
+
+    img {
+      width: 50%;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 0 15px #000;
+    }
+
+    p {
+      font-style: italic;
+      padding: 0 20px;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    iframe {
+      border: 2px solid #eee;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #000;
+      margin-top: 20px;
+    }
+
+    /* زر الرجوع */
+    .back-btn {
+      margin-top: 30px;
+      background-color: #9b59b6;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .back-btn:hover {
+      background-color: #7e3fbf;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Stranger Things</h1>
+    <img src="https://tse4.mm.bing.net/th?id=OIP.Zb8eGRw3g042YPgJoxBobwHaEK&pid=Api&P=0&h=220" alt="Stranger Things">
+
+    <p><strong>Writer & Director:</strong> The Duffer Brothers</p>
+    <p><strong>Genre:</strong> Science Fiction, Horror, Drama</p>
+    <p><strong>Release Date:</strong> 2016</p>
+    <p><strong>Seasons:</strong> 4</p>
+    <p><strong>Episodes:</strong> 34</p>
+    <p><strong>Episode Duration:</strong> 42–77 minutes</p>
+    <p><strong>Main Cast:</strong> Winona Ryder, David Harbour, Millie Bobby Brown</p>
+    <p><strong>IMDb Rating:</strong> 8.7/10</p>
+
+    <p><strong>Story:</strong><br>
+    A group of kids in a small town uncover supernatural mysteries, secret experiments, and face dangerous creatures from another dimension.</p>
+
+    <iframe src="https://drive.google.com/file/d/1-1GexvTI6ZtnWHFITYrC-i2CwrelJdM_/preview" width="450" height="350" allow="autoplay"></iframe>
+
+    <button class="back-btn" onclick="window.location.href='movies.html'">Back to Home</button>
+  </div>
+</body>
+</html>

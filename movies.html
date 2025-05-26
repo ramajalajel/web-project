@@ -1,0 +1,144 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cinema Platform - Movies</title>
+<style>
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  /* خلفية متحركة صفحة الأفلام */
+  #moviesSection {
+    position: relative;
+    min-height: 100vh;
+    padding: 30px 15px 50px 15px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #moviesSection::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    filter: brightness(0.4) blur(4px);
+    background-size: cover;
+    background-position: center;
+    animation: slideBackground 20s infinite;
+  }
+  @keyframes slideBackground {
+    0% { background-image: url('https://tse4.mm.bing.net/th?id=OIP.BAlt3fBLGgNR0BioJdlEjgHaEK&pid=Api&P=0&h=220'); }
+    25% { background-image: url('https://tse3.mm.bing.net/th?id=OIP.HoFUzqz4P79txFvDcTvEcAHaEK&pid=Api&P=0&h=220'); }
+    50% { background-image: url('https://tse4.mm.bing.net/th?id=OIP.iEE9g-truDbT7RvFsTmwxQHaEK&pid=Api&P=0&h=220'); }
+    75% { background-image: url('https://tse4.mm.bing.net/th?id=OIP.Zb8eGRw3g042YPgJoxBobwHaEK&pid=Api&P=0&h=220'); }
+    100% { background-image: url('https://tse4.mm.bing.net/th?id=OIP.BAlt3fBLGgNR0BioJdlEjgHaEK&pid=Api&P=0&h=220'); }
+  }
+
+  .movies-section-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(34,34,34,0.85);
+    border-radius: 10px;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .movies-section-inner h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #9b59b6;
+  }
+
+  .movie {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #222;
+    overflow: hidden;
+  }
+  .movie img {
+    width: 150px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+  .movie h2 {
+    color: #9b59b6;
+    margin-top: 0;
+  }
+  .movie p {
+    margin: 5px 0;
+  }
+  .more-details-btn {
+    margin-top: 10px;
+    background-color: #9b59b6;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  .more-details-btn:hover {
+    background-color: #7e3fbf;
+  }
+</style>
+</head>
+<body>
+
+<div id="moviesSection">
+  <div class="movies-section-inner">
+    <h1>Movie Recommendations</h1>
+
+    <div class="movie">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.BAlt3fBLGgNR0BioJdlEjgHaEK&pid=Api&P=0&h=220" alt="The Karate Kid" />
+      <h2>The Karate Kid</h2>
+      <p><strong>Writer:</strong> Robert Mark Kamen</p>
+      <p><strong>Director:</strong> John G. Avildsen</p>
+      <p><strong>Year:</strong> 1984</p>
+      <p><strong>Rating:</strong> 7.3/10 IMDb</p>
+      <p>Sports drama about a young boy learning karate from a wise mentor to overcome challenges.</p>
+      <button class="more-details-btn" onclick="window.location.href='karate_kid.html'">More Details</button>
+    </div>
+
+    <div class="movie">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.HoFUzqz4P79txFvDcTvEcAHaEK&pid=Api&P=0&h=220" alt="The Shawshank Redemption" />
+      <h2>The Shawshank Redemption</h2>
+      <p><strong>Writer:</strong> Frank Darabont</p>
+      <p><strong>Year:</strong> 1994</p>
+      <p><strong>Rating:</strong> 9.3/10 IMDb</p>
+      <p>Powerful drama about hope and friendship inside a harsh prison setting.</p>
+      <button class="more-details-btn" onclick="window.location.href='shawshank.html'">More Details</button>
+    </div>
+
+    <div class="movie">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.iEE9g-truDbT7RvFsTmwxQHaEK&pid=Api&P=0&h=220" alt="Interstellar" />
+      <h2>Interstellar</h2>
+      <p><strong>Writers:</strong> Jonathan Nolan, Christopher Nolan</p>
+      <p><strong>Director:</strong> Christopher Nolan</p>
+      <p><strong>Year:</strong> 2014</p>
+      <p><strong>Rating:</strong> 8.6/10 IMDb</p>
+      <p>Astronauts travel through a wormhole to find a new home for humanity.</p>
+      <button class="more-details-btn" onclick="window.location.href='interstellar.html'">More Details</button>
+    </div>
+
+    <div class="movie">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.Zb8eGRw3g042YPgJoxBobwHaEK&pid=Api&P=0&h=220" alt="Stranger Things" />
+      <h2>Stranger Things</h2>
+      <p><strong>Writers & Directors:</strong> The Duffer Brothers</p>
+      <p><strong>Year:</strong> 2016–Present</p>
+      <p><strong>Rating:</strong> 8.7/10 IMDb</p>
+      <p>Group of kids uncover supernatural mysteries and secret experiments in their town.</p>
+      <button class="more-details-btn" onclick="window.location.href='stranger_things.html'">More Details</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
